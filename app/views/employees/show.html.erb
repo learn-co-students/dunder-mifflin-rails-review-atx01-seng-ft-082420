@@ -9,6 +9,6 @@
     <input type="submit" value="Edit Employee" />
 </form>
 
-<form action="<%=employee_path(@employee)/destroy%>">
-    <input type="submit" value="Delete Employee" />
-</form>
+<%= form_with model: @employee, method: :delete do | f |%>
+    <%= f.submit "Delete Employee "%>
+    <%end%>

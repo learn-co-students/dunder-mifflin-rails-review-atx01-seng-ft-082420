@@ -47,9 +47,8 @@ class EmployeesController < ApplicationController
     def destroy
         @employee = Employee.find(params[:id])
         @employee.destroy
-        flash[:notice] = "Employee deleted."
         redirect_to employees_path
-    end
+      end
 
     private
 
