@@ -1,0 +1,14 @@
+<h1><%=@employee.name%></h1>
+<img src="<%=@employee.img_url%>" alt="Profile Picture">
+<h2>Alias: <%=@employee.alias%><h2>
+<h2>Title: <%=@employee.title%><h2>
+<h2>Office: <%=@employee.office%><h2>
+<h2>Dog: <%= link_to @dog.name, dog_path(@dog) %><h2>
+
+<form action="<%=edit_employee_path(@employee)%>">
+    <input type="submit" value="Edit Employee" />
+</form>
+
+<form action="<%=employee_path(@employee)/destroy%>">
+    <input type="submit" value="Delete Employee" />
+</form>
