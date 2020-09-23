@@ -1,0 +1,10 @@
+<h1>Employees:</h1>
+<ul>
+<%@employees.each do |e|%>
+    <li><%= link_to e.name, employee_path(e) %></li>
+<%end%>
+</ul>
+
+<form action="<%=new_employee_path%>">
+    <input type="submit" value="Create New Employee" />
+</form>
