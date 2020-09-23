@@ -1,0 +1,12 @@
+<h1>All dogs</h1>
+<ul>
+    <% employee_count = [] %>
+    <% @dogs.each do |dog| %>
+       
+        <% employee_count.push(dog.id) %>
+        <li><%= link_to dog.name, dog_path(dog) %></li>
+    <% end %>
+</ul>
+
+<%= employee_count %>
+

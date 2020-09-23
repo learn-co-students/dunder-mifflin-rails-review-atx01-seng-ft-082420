@@ -1,0 +1,18 @@
+<%= form_with model: @employee do |f| %>
+    <%= f.label "First Name" %>
+    <%= f.text_field :first_name %>
+    <%= f.label "Last Name" %>
+    <%= f.text_field :last_name %>
+    <%= f.label "Alias" %>
+    <%= f.text_field :alias %>
+    <%= f.label "Title" %>
+    <%= f.text_field :title %>
+    <%= f.label "Office" %>
+    <%= f.text_field :office %>
+    <%= f.label "Image Url" %>
+    <%= f.text_field :img_url %>
+    <%= f.label "Select Dog" %>
+    <%= f.collection_select :dog_id, @dog, :id, :name %>
+    <%= f.submit %>
+
+<% end %>
