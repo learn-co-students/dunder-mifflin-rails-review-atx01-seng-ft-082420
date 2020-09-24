@@ -1,0 +1,23 @@
+<h1><%= @employee.first_name + " " + @employee.last_name %> </h1>
+
+<br>
+
+<h2> <%= @employee.alias %> </h2>
+
+<br>
+
+<h2> <%= @employee.title %> </h2>
+
+<br>
+
+<h2> <%= @employee.office %> </h2>
+
+<img src= "<%= @employee.img_url%>" alt="<%=@employee.first_name%>" >
+
+<br>
+
+<h2> <%= link_to @employee.dog.name, dog_path(@employee.dog)%> </h2>
+
+<br>
+
+<a href="<%=edit_employee_path%>"><button type="button">Change this person forever</button></a>
