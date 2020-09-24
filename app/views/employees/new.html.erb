@@ -1,0 +1,10 @@
+<h1> WeLcomME tO tHe OFFiCe! :D </h1>
+<% if flash[:errors] %> 
+    <% flash[:errors].each do |error| %>
+    <li style="color:red"> <%= error %> </li>
+<%end%>
+<%end%>
+
+<br>
+
+<%= render 'form'%>
